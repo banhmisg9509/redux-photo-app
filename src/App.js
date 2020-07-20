@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import './App.scss';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
-import './App.scss';
 
 const Photo = React.lazy(() => import('./features/Photo'));
 

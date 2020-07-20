@@ -1,9 +1,9 @@
-import React from 'react';
+import PHOTO_CATEGORY_OPTIONS from 'constants/Global';
+import Images from 'constants/Images';
 import PropTypes from 'prop-types';
+import React from 'react';
 import Select from 'react-select';
-import { Form, Label, Input, FormGroup, Button } from 'reactstrap';
-import PHOTO_CATEGORY_OPTIONS from '../../../../constants/Global';
-import Images from '../../../../constants/Images';
+import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
 
 function PhotoForm() {
   return (

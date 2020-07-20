@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Container, Col, Row } from 'reactstrap';
+import { Col, Container, Row } from 'reactstrap';
 import './Header.scss';
 
 function Header() {
