@@ -9,7 +9,7 @@ const getRandomImageUrl = () => {
 };
 
 function RandomPhoto(props) {
-  const { name, imageUrl, onImageUrlChange, onRandomButtonBlur } = props;
+  const { name, imageUrl, cssClass, onImageUrlChange, onRandomButtonBlur } = props;
 
   const handleRandomPhotoClick = async () => {
     if (onImageUrlChange) {
@@ -18,7 +18,7 @@ function RandomPhoto(props) {
     }
   };
   return (
-    <div className='random-photo'>
+    <div className={'random-photo ' + cssClass}>
       <div className='random-photo__button'>
         <Button
           outline
