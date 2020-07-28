@@ -5,7 +5,7 @@ import { Button } from 'reactstrap';
 
 const getRandomImageUrl = () => {
   const randomId = Math.trunc(Math.random() * 2000);
-  return `https://picsum.photos/id/${randomId}/300/300`;
+  return `https://picsum.photos/id/${randomId}/600/600`;
 };
 
 function RandomPhoto(props) {

@@ -1,16 +1,19 @@
+import store from 'app/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import SimpleReactLightbox from "simple-react-lightbox";
 import App from './App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import store from 'app/store';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store} >
-      <App />
+      <SimpleReactLightbox>
+        <App />
+      </SimpleReactLightbox>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

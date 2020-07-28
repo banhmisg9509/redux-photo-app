@@ -9,11 +9,7 @@ import { Button, FormGroup, Spinner } from 'reactstrap';
 import * as Yup from 'yup';
 
 function PhotoForm(props) {
-  const initialValues = {
-    title: '',
-    category: null,
-    photo: '',
-  };
+  const { initialValues, isAddMode } = props;
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required('This field is required.'),
@@ -66,7 +62,7 @@ function PhotoForm(props) {
                     style={{ marginBottom: '3px', marginRight: '5px' }}
                   />
                 ) : null}
-                Add to Album
+                {isAddMode ? 'Add to Album' : 'Update your photo'}
               </Button>
             </FormGroup>
           </Form>

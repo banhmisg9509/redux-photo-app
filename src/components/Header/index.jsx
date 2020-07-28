@@ -11,12 +11,12 @@ function Header() {
           <Row className='justify-content-between'>
             <Col xs='auto'>
               <a
-                href='https://youtube.com/easyfrontend'
+                href='https://www.facebook.com/banhmisgUIT'
                 className='header__link header__title'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                Easy Frontend
+                banhmisgUIT
               </a>
             </Col>
             <Col xs='auto'>
