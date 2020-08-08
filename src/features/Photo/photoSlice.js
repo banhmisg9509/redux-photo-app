@@ -1,10 +1,11 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import fetchPhotoList from 'api/fetchPhotoList';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { fetchPhotoList } from 'api/photoResources';
+import { randInt } from 'utils';
 
 export const fetchPhotos = createAsyncThunk('fetchAllPhoto',
   async () => {
-    const photos = await fetchPhotoList()
-    return photos
+    const page = randInt();
+    return await fetchPhotoList(page);
   }
 )
 
@@ -27,7 +28,7 @@ const { actions, reducer } = createSlice({
     }
   },
   extraReducers: {
-    [fetchPhotos.fulfilled.type]: (state, {payload}) => {
+    [fetchPhotos.fulfilled.type]: (state, { payload }) => {
       return state.length === 0 ? payload : state;
     }
   }
