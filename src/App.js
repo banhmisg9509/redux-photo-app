@@ -6,16 +6,9 @@ import './App.scss';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
 
-let firebaseAPIkey = process.env.FIREBASE_API_KEY;
-let firebaseAuthDomain = process.env.FIREBASE_AUTH_DOMAIN;
-if (process.env.NODE_ENV !== 'production') {
-  firebaseAPIkey = process.env.REACT_APP_FIREBASE_API_KEY;
-  firebaseAuthDomain = process.env.REACT_APP_FIREBASE_AUTH_DOMAIN;
-}
-// Configure Firebase.
 const config = {
-  apiKey: firebaseAPIkey,
-  authDomain: firebaseAuthDomain,
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN
 };
 firebase.initializeApp(config);
 
