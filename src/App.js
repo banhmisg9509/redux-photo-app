@@ -7,9 +7,10 @@ import Header from './components/Header';
 import NotFound from './components/NotFound';
 
 const config = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN
 };
+
 firebase.initializeApp(config);
 
 const Photo = lazy(() => import('./features/Photo'));
