@@ -1,4 +1,5 @@
 Redux Photo App
+![Screenshot](./screenshot.png)
 
 ## Available Scripts
 
